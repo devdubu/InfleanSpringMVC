@@ -21,4 +21,10 @@ public class ResponseViewController {
         model.addAttribute("data", "hello!");
         return "response/hello";
     }
+
+    //권장하지 않은 방식,, 경로 설정이 불명확함
+    @RequestMapping("/response/hello")
+    public void responseViewV3(Model model){
+        model.addAttribute("data", "hello!");
+    }
 }
